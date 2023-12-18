@@ -16,7 +16,7 @@ namespace pryBlaiottaIE.clases
         OleDbDataReader reader;
         OleDbConnection conexionBD;
         OleDbDataAdapter adapter;
-        string cadenaconexion = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=C:\\Users\\Nico\\Downloads\\EL_CLUB1.accdb";
+        string cadenaconexion = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=EL_CLUB1.accdb";
         public string estadoconexion = "";
 
         public void insertar(TextBox Entidad, TextBox Apertura, TextBox Numero, TextBox Juzgado, TextBox Direccion, TextBox Liquidador)

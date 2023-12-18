@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNavegar));
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblLiquidador = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -270,6 +271,7 @@
             this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.lblLiquidador);
             this.Controls.Add(this.lblNumero);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNavegar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Navegar";

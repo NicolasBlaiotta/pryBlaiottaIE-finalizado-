@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.btnIngresar = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
@@ -35,13 +36,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblInicie = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblConexion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(85, 261);
+            this.btnIngresar.Location = new System.Drawing.Point(81, 252);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
             this.btnIngresar.TabIndex = 0;
@@ -102,16 +102,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "COVERCARE";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(85, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lblConexion
             // 
             this.lblConexion.AutoSize = true;
@@ -127,7 +117,6 @@
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(241, 317);
             this.Controls.Add(this.lblConexion);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblInicie);
             this.Controls.Add(this.textBox2);
@@ -135,6 +124,7 @@
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnIngresar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f";
@@ -152,7 +142,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblInicie;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblConexion;
     }
 }

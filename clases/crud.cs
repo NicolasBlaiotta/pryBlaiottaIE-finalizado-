@@ -16,8 +16,9 @@ namespace pryBlaiottaIE.Clases
         OleDbCommand comando;
         OleDbDataReader reader;
         OleDbConnection conexionBD;
+        //proporciona un conjunto de comandos de base de datos y una conexión de base de datos
         OleDbDataAdapter adapter;
-        string cadenaconexion = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=C:\\Users\\Nico\\Downloads\\EL_CLUB1.accdb";
+        string cadenaconexion = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=Data Source=EL_CLUB1.accdb";
         public string estadoconexion = "";
 
 
@@ -25,8 +26,8 @@ namespace pryBlaiottaIE.Clases
         {
             try
             {
-                conexionBD = new OleDbConnection();
-                conexionBD.ConnectionString = cadenaconexion;
+
+                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = EL_CLUB1.accdb");
                 conexionBD.Open();
                 estadoconexion = "conectado";
             }
@@ -39,12 +40,15 @@ namespace pryBlaiottaIE.Clases
         }
         public void mostrar(DataGridView TablaSocios)
         {
+            // obtengo la cadena de conexión a la base de datos desde la configuración del programa
             var cadena = ConfigurationManager.ConnectionStrings["dbacces"].ConnectionString;
             try
             {
                 using (OleDbConnection conector = new OleDbConnection(cadena))
                 {
+                    //abre la conexion a la bd
                     conector.Open();
+                    //selecciono que quiero que sea desde la tabla socios
                     string query = @"select * from Socios";
                     DataTable DT = new DataTable();
                     comando = new OleDbCommand(query, conector);
